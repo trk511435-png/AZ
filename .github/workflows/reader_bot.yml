@@ -20,11 +20,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          pip install selenium requests webdriver-manager
-
-      - name: Run Automation Script
+      - name: Run Script
         env:
           ACTION_TYPE: ${{ github.event.inputs.action }}
         run: |
